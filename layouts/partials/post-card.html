@@ -17,8 +17,10 @@
                 </div>
                 {{ end }}
             </div>
-            {{ if .Summary }}
-            <p class="post-card-summary">{{ .Summary }}</p>
+            {{ if .Description }}
+            <p class="post-card-summary">{{ .Description }}</p>
+            {{ else if .Summary }}
+            <p class="post-card-summary">{{ .Summary | plainify | truncate 160 }}</p>
             {{ end }}
         </div>
     </a>

@@ -146,9 +146,11 @@ See `todo.txt` for comprehensive list of planned improvements, organized by prio
 ### Content Guidelines
 - Blog posts in `content/posts/`
 - Use Hugo front matter: title, date, categories, tags, draft status
-- Write summaries for better post card previews
+- Add `description` field for custom post summaries (120-160 characters recommended)
+- Use `<!--more-->` divider for natural summary breaks
 - Add featured images using `featured_image: "/imgs/your-image.jpg"` parameter
-- See `docs/FEATURED_IMAGES.md` for complete featured image documentation
+- See `docs/SUMMARIES.md` for summary best practices
+- See `docs/FEATURED_IMAGES.md` for featured image documentation
 
 ## Current Status
 
