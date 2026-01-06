@@ -7,6 +7,8 @@
 
     {{ $mainCSS := resources.Get "css/main.css" | resources.Minify }}
     {{ $blogCSS := resources.Get "css/blog.css" | resources.Minify }}
+    {{ $homepageCSS := resources.Get "css/homepage.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}">
     <link rel="stylesheet" href="{{ $blogCSS.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $homepageCSS.RelPermalink }}">
 </head>

@@ -1,24 +1,75 @@
 {{ define "main" }}
 <div class="home-container">
-    <section class="hero">
-        <h1>{{ .Site.Title }}</h1>
+    <!-- Simplified Hero Section -->
+    <section class="hero-simple">
+        <img src="{{ .Site.Params.profileImage }}" alt="{{ .Site.Title }}" class="hero-avatar">
+        <p class="subtitle">{{ .Site.Params.subtitle }}</p>
         <p class="tagline">{{ .Site.Params.tagline }}</p>
     </section>
 
-    <section class="blog-posts">
-        <h2 class="section-title">Latest Posts</h2>
+    <!-- Featured Article Section -->
+    {{ $posts := where .Site.RegularPages "Type" "posts" }}
+    {{ if gt (len $posts) 0 }}
+    {{ $featured := index $posts 0 }}
+    <section class="featured-article">
+        <div class="featured-badge">Featured Article</div>
+        <article class="featured-card">
+            {{ if $featured.Params.featured_image }}
+            <div class="featured-image">
+                <img src="{{ $featured.Params.featured_image }}" alt="{{ $featured.Title }}">
+            </div>
+            {{ end }}
+            <div class="featured-content">
+                <h2><a href="{{ $featured.Permalink }}">{{ $featured.Title }}</a></h2>
+                <div class="featured-meta">
+                    <time datetime="{{ $featured.Date.Format "2006-01-02" }}">{{ $featured.Date.Format "January 2, 2006" }}</time>
+                    <span class="meta-separator">•</span>
+                    <span>{{ $featured.ReadingTime }} min read</span>
+                </div>
+                {{ if $featured.Description }}
+                <p class="featured-summary">{{ $featured.Description }}</p>
+                {{ else if $featured.Summary }}
+                <p class="featured-summary">{{ $featured.Summary | plainify | truncate 200 }}</p>
+                {{ end }}
+                <a href="{{ $featured.Permalink }}" class="read-more">Read Article →</a>
+            </div>
+        </article>
+    </section>
+    {{ end }}
+
+    <!-- Recent Articles Grid -->
+    <section class="articles-grid">
+        <h2 class="section-title">Recent Articles</h2>
         <div class="posts-grid">
-            {{ $posts := where .Site.RegularPages "Type" "posts" }}
-            {{ range first 10 $posts }}
+            {{ range after 1 (first 10 $posts) }}
                 {{ partial "post-card.html" . }}
             {{ end }}
         </div>
 
-        {{ if gt (len $posts) 10 }}
-        <div class="pagination">
-            <a href="/posts/" class="view-all">View All Posts →</a>
+        {{ if gt (len $posts) 1 }}
+        <div class="view-more">
+            <a href="/posts/" class="btn-view-all">View All Articles →</a>
         </div>
         {{ end }}
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-navigation">
+        <h2>Explore by Topic</h2>
+        <div class="category-cards">
+            <a href="/categories/tutorials/" class="category-card">
+                <h3>Technical Tutorials</h3>
+                <p>Deep dives into technologies and frameworks</p>
+            </a>
+            <a href="/categories/projects/" class="category-card">
+                <h3>Project Showcases</h3>
+                <p>Real-world implementations and case studies</p>
+            </a>
+            <a href="/categories/career/" class="category-card">
+                <h3>Career & Learning</h3>
+                <p>Professional growth and insights</p>
+            </a>
+        </div>
     </section>
 </div>
 {{ end }}
