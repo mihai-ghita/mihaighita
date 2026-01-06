@@ -1,0 +1,16 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*~

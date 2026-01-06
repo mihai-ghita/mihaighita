@@ -1,0 +1,64 @@
+baseURL: "https://mihaighita.org/"
+languageCode: "en-us"
+title: "Mihai Ghita"
+
+params:
+  description: "Software Engineer with 8 years of experience in Data Engineering and Software Development"
+  author: "Mihai Ghita"
+  subtitle: "Software Engineer | Tech Enthusiast | Problem Solver"
+  tagline: "Every problem has a solution. You just need to find it."
+  profileImage: "/imgs/1643142025589.jpeg"
+  colors:
+    primaryGradientStart: "#667eea"
+    primaryGradientEnd: "#764ba2"
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 30
+    - identifier: categories
+      name: Categories
+      weight: 40
+    - identifier: tutorials
+      name: Technical Tutorials
+      url: /categories/tutorials/
+      parent: categories
+      weight: 41
+    - identifier: projects
+      name: Project Showcases
+      url: /categories/projects/
+      parent: categories
+      weight: 42
+    - identifier: career
+      name: Career & Learning
+      url: /categories/career/
+      parent: categories
+      weight: 43
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: monokai
+
+pagination:
+  pagerSize: 10
+
+outputs:
+  home: ["HTML", "RSS"]
+  section: ["HTML", "RSS"]

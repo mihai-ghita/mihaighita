@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="home-container">
+    <section class="hero">
+        <h1>{{ .Site.Title }}</h1>
+        <p class="tagline">{{ .Site.Params.tagline }}</p>
+    </section>
+
+    <section class="blog-posts">
+        <h2 class="section-title">Latest Posts</h2>
+        <div class="posts-grid">
+            {{ $posts := where .Site.RegularPages "Type" "posts" }}
+            {{ range first 10 $posts }}
+                {{ partial "post-card.html" . }}
+            {{ end }}
+        </div>
+
+        {{ if gt (len $posts) 10 }}
+        <div class="pagination">
+            <a href="/posts/" class="view-all">View All Posts →</a>
+        </div>
+        {{ end }}
+    </section>
+</div>
+{{ end }}

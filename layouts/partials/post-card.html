@@ -1,0 +1,18 @@
+<article class="post-card">
+    <a href="{{ .Permalink }}" class="post-card-link">
+        <h3 class="post-card-title">{{ .Title }}</h3>
+        <div class="post-card-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ if .Params.categories }}
+            <div class="post-card-categories">
+                {{ range .Params.categories }}
+                <span class="category-badge">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ if .Summary }}
+        <p class="post-card-summary">{{ .Summary }}</p>
+        {{ end }}
+    </a>
+</article>
