@@ -415,6 +415,61 @@
 }
 
 /* Responsive */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .posts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+
+    .post-title {
+        font-size: 48px;
+    }
+
+    .post-content {
+        font-size: 19px;
+        line-height: 1.9;
+    }
+}
+
+/* Tablet (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .posts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .post-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .post-card-title {
+        font-size: 20px;
+    }
+
+    .post-content {
+        font-size: 17px;
+    }
+
+    .post-content h2 {
+        font-size: 28px;
+    }
+
+    .post-content h3 {
+        font-size: 22px;
+    }
+}
+
+/* Mobile (up to 600px) */
 @media (max-width: 600px) {
     .posts-grid {
         grid-template-columns: 1fr;
@@ -445,7 +500,24 @@
         text-align: left;
     }
 
+    .prev-post,
+    .next-post {
+        min-height: 44px;
+        padding: 15px 20px;
+    }
+
     .section-title {
         font-size: 28px;
+    }
+
+    .view-all {
+        min-height: 44px;
+        padding: 12px 30px;
+    }
+
+    .category-badge {
+        min-height: 28px;
+        padding: 6px 14px;
+        font-size: 13px;
     }
 }

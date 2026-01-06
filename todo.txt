@@ -79,7 +79,7 @@
 ### Interactive Elements
 [ ] Add loading states or skeleton screens
 [ ] Implement page transition animations
-[ ] Add smooth scroll behavior
+[X] Add smooth scroll behavior (see docs/RESPONSIVE_DESIGN.md)
 [ ] Consider parallax effects in hero section
 [ ] Add hover preview for blog cards
 
@@ -92,12 +92,12 @@
 [ ] Add privacy policy/terms links (if using analytics)
 
 ### Responsive Design
-[ ] Add tablet breakpoint at 768px
-[ ] Add large desktop breakpoint at 1440px+
-[ ] Improve mobile menu animations
-[ ] Ensure all touch targets are min 44px
-[ ] Implement responsive images with srcset
-[ ] Add picture element for art direction
+[X] Add tablet breakpoint at 768px (see docs/RESPONSIVE_DESIGN.md)
+[X] Add large desktop breakpoint at 1440px+ (see docs/RESPONSIVE_DESIGN.md)
+[X] Improve mobile menu animations (see docs/RESPONSIVE_DESIGN.md)
+[X] Ensure all touch targets are min 44px (see docs/RESPONSIVE_DESIGN.md)
+[X] Implement responsive images with srcset (see docs/RESPONSIVE_DESIGN.md)
+[X] Add picture element for art direction (see docs/RESPONSIVE_DESIGN.md)
 
 ### Performance
 [ ] Optimize and combine CSS files

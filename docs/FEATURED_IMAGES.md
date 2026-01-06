@@ -129,11 +129,48 @@ Featured images are completely optional. If you don't add a `featured_image` par
 - Consider WebP format for modern browsers
 - Use appropriate dimensions (don't upload 4K images)
 
+## Responsive Images
+
+### Using srcset for Performance
+
+Serve appropriately sized images based on device viewport:
+
+```markdown
+---
+featured_image: "/imgs/post-800w.jpg"
+featured_image_srcset: "/imgs/post-400w.jpg 400w, /imgs/post-800w.jpg 800w, /imgs/post-1200w.jpg 1200w"
+---
+```
+
+The browser automatically selects the best image size based on:
+- Device viewport width
+- Device pixel ratio (retina vs standard)
+- Network conditions (in some browsers)
+
+### Art Direction with Picture Element
+
+Use different crops or compositions for different screen sizes:
+
+```markdown
+---
+featured_image: "/imgs/post-desktop.jpg"
+featured_image_mobile: "/imgs/post-mobile-crop.jpg"
+featured_image_tablet: "/imgs/post-tablet-crop.jpg"
+---
+```
+
+**Example Use Cases:**
+- Mobile: Portrait crop focusing on subject
+- Tablet: Landscape crop with more context
+- Desktop: Full wide landscape
+
+See `docs/RESPONSIVE_DESIGN.md` for complete responsive image documentation.
+
 ## Future Enhancements
 
 Planned improvements for featured images:
 - [ ] Automatic image resizing/optimization
-- [ ] Multiple image sizes (srcset) for responsive images
+- [X] Multiple image sizes (srcset) for responsive images
 - [ ] Social media meta tags (Open Graph, Twitter Cards)
 - [ ] Default/placeholder images for posts without featured images
 - [ ] Image caption support

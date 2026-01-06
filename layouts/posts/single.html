@@ -31,7 +31,29 @@
 
             {{ if .Params.featured_image }}
             <div class="post-featured-image">
+                {{ if .Params.featured_image_mobile }}
+                <picture>
+                    <source media="(max-width: 600px)" srcset="{{ .Params.featured_image_mobile }}">
+                    <source media="(max-width: 1024px)" srcset="{{ .Params.featured_image_tablet | default .Params.featured_image }}">
+                    {{ if .Params.featured_image_srcset }}
+                    <img
+                        src="{{ .Params.featured_image }}"
+                        srcset="{{ .Params.featured_image_srcset }}"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 800px"
+                        alt="{{ .Title }}">
+                    {{ else }}
+                    <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+                    {{ end }}
+                </picture>
+                {{ else if .Params.featured_image_srcset }}
+                <img
+                    src="{{ .Params.featured_image }}"
+                    srcset="{{ .Params.featured_image_srcset }}"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 800px"
+                    alt="{{ .Title }}">
+                {{ else }}
                 <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+                {{ end }}
             </div>
             {{ end }}
         </header>

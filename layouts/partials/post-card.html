@@ -2,7 +2,16 @@
     <a href="{{ .Permalink }}" class="post-card-link">
         {{ if .Params.featured_image }}
         <div class="post-card-image">
+            {{ if .Params.featured_image_srcset }}
+            <img
+                src="{{ .Params.featured_image }}"
+                srcset="{{ .Params.featured_image_srcset }}"
+                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt="{{ .Title }}"
+                loading="lazy">
+            {{ else }}
             <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+            {{ end }}
         </div>
         {{ end }}
         <div class="post-card-content">

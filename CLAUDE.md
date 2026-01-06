@@ -74,12 +74,17 @@ The site is deployed via GitHub Pages:
 - **Reading Time**: Automatic calculation based on word count (200 wpm)
 - **Word Count**: Displayed on single post pages
 - **Categories & Tags**: Taxonomies for content organization
-- **Responsive Design**: Mobile-first approach
+- **Responsive Design**: Mobile-first with 4 breakpoints
+- **Responsive Images**: srcset and picture element support
+- **Touch Targets**: All interactive elements minimum 44px
+- **Smooth Scrolling**: CSS scroll-behavior for anchor links
+- **Mobile Menu**: Animated hamburger menu with slide-down
 
 See detailed documentation in `docs/`:
 - `FEATURED_IMAGES.md` - Featured image usage
 - `SUMMARIES.md` - Writing effective summaries
 - `READING_TIME.md` - Reading time estimates
+- `RESPONSIVE_DESIGN.md` - Responsive design implementation
 
 ## Design System
 
@@ -102,10 +107,10 @@ See detailed documentation in `docs/`:
 - Tagline: 20px
 
 ### Responsive Breakpoints
-- Mobile: 600px and below
-- Tablet: 768px (to be added)
-- Desktop: 1200px max-width containers
-- Large desktop: 1440px+ (to be added)
+- Mobile: 600px and below (hamburger menu, single column)
+- Tablet: 601px to 1024px (horizontal menu, 2-column grid)
+- Desktop: 1025px to 1439px (1200px containers, 3-column grid)
+- Large desktop: 1440px+ (1400px containers, enhanced spacing)
 
 ### Component Patterns
 - Border radius: 15-20px for cards, 50px for buttons
@@ -164,8 +169,10 @@ See `todo.txt` for comprehensive list of planned improvements, organized by prio
 - Add `description` field for custom post summaries (120-160 characters recommended)
 - Use `<!--more-->` divider for natural summary breaks
 - Add featured images using `featured_image: "/imgs/your-image.jpg"` parameter
+- Optional responsive images: `featured_image_srcset`, `featured_image_mobile`, `featured_image_tablet`
 - See `docs/SUMMARIES.md` for summary best practices
 - See `docs/FEATURED_IMAGES.md` for featured image documentation
+- See `docs/RESPONSIVE_DESIGN.md` for responsive image guidelines
 
 ## Current Status
 
