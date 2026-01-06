@@ -24,6 +24,12 @@
                 </div>
                 {{ end }}
             </div>
+
+            {{ if .Params.featured_image }}
+            <div class="post-featured-image">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+            </div>
+            {{ end }}
         </header>
 
         <div class="post-content">

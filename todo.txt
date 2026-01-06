@@ -1,0 +1,142 @@
+# Website Improvement Todos
+# Generated: 2026-01-06
+
+## HIGH PRIORITY
+
+### Content & Pages
+[ ] Add meaningful content to About page (/content/about.md)
+[ ] Add meaningful content to Contact page with contact form (/content/contact.md)
+[ ] Create Projects/Portfolio page to showcase work
+[ ] Fix blog summary rendering (currently showing HTML tags in post cards)
+
+### SEO & Meta
+[ ] Add Open Graph meta tags for social sharing
+[ ] Add Twitter Card meta tags
+[ ] Implement JSON-LD structured data for blog posts
+[ ] Add favicon.ico to root
+[ ] Add apple-touch-icon.png
+[ ] Add manifest.json for PWA support
+[ ] Add canonical URLs to all pages
+
+### Accessibility
+[ ] Add ARIA labels to hamburger menu toggle
+[ ] Add ARIA labels to dropdown navigation
+[ ] Add skip-to-content link at page top
+[ ] Ensure all interactive elements have proper focus indicators
+[ ] Test keyboard navigation through all menus and links
+[ ] Check color contrast ratios meet WCAG AA standards
+[ ] Add descriptive alt text to all images
+
+## MEDIUM PRIORITY
+
+### Hero Section Enhancement
+[ ] Add profile image to hero section
+[ ] Add brief subtitle/role description to hero
+[ ] Add CTA buttons (e.g., "View My Work", "Read Blog", "Get in Touch")
+[ ] Consider animated text or typing effect for tagline
+
+### Homepage Expansion
+[ ] Add "About Me" preview section before blog posts
+[ ] Add featured projects section on homepage
+[ ] Add skills/technologies section with icon badges
+[ ] Consider adding recent GitHub activity widget
+[ ] Add email subscription or newsletter signup
+
+### Blog Post Improvements
+[X] Add featured image support for blog posts (see docs/FEATURED_IMAGES.md)
+[ ] Add read time estimate to post cards
+[ ] Truncate summaries properly (max 150-200 chars)
+[ ] Add "Read More" button to post cards
+[ ] Show tag count or popular tags on cards
+[ ] Consider card accent color based on category
+
+### Navigation Enhancements
+[ ] Make active page indicator more visually distinct
+[ ] Add search functionality
+[ ] Add RSS feed link to navigation or footer
+[ ] Implement dark/light mode toggle
+[ ] Improve dropdown hover state visibility
+
+### Design & Styling
+[ ] Consider limiting gradient to header/hero only (less overwhelming)
+[ ] Add subtle texture or pattern overlay to gradient
+[ ] Implement dark mode with inverted color scheme
+[ ] Add more font weight variations for emphasis
+[ ] Consider adding Google Fonts (Inter, Poppins, or Space Grotesk)
+[ ] Ensure sufficient white space throughout design
+
+## NICE TO HAVE
+
+### Blog Features
+[ ] Add table of contents for long posts
+[ ] Add reading progress indicator
+[ ] Add social share buttons to posts
+[ ] Add related posts section at end of posts
+[ ] Implement comments system (utterances, giscus, or Disqus)
+[ ] Add post reactions/likes functionality
+[ ] Add copy-to-clipboard button for code blocks
+
+### Interactive Elements
+[ ] Add loading states or skeleton screens
+[ ] Implement page transition animations
+[ ] Add smooth scroll behavior
+[ ] Consider parallax effects in hero section
+[ ] Add hover preview for blog cards
+
+### Footer Enhancements
+[ ] Add quick links to main pages in footer
+[ ] Add recent posts links to footer
+[ ] Add newsletter signup to footer
+[ ] Add back-to-top button
+[ ] Add site map link
+[ ] Add privacy policy/terms links (if using analytics)
+
+### Responsive Design
+[ ] Add tablet breakpoint at 768px
+[ ] Add large desktop breakpoint at 1440px+
+[ ] Improve mobile menu animations
+[ ] Ensure all touch targets are min 44px
+[ ] Implement responsive images with srcset
+[ ] Add picture element for art direction
+
+### Performance
+[ ] Optimize and combine CSS files
+[ ] Implement CSS purging for production
+[ ] Load social SVG icons as sprites
+[ ] Add lazy loading for images
+[ ] Optimize image sizes and formats (WebP)
+[ ] Consider code splitting for JavaScript
+
+### Content Strategy
+[ ] Write compelling About page copy
+[ ] Document 3-5 portfolio projects
+[ ] Create project case studies with:
+  - Problem statement
+  - Solution approach
+  - Technologies used
+  - Results/outcomes
+  - Screenshots/demos
+[ ] Plan blog content calendar
+[ ] Write initial blog posts (5-10 posts)
+
+### Portfolio/Projects Section
+[ ] Design project card component
+[ ] Add project filtering by technology/category
+[ ] Add project thumbnails/screenshots
+[ ] Include live demo links
+[ ] Include GitHub repository links
+[ ] Add tech stack badges to projects
+
+## BUGS TO FIX
+
+[ ] Post card summary showing raw HTML (public/index.html:90-96)
+[ ] Dropdown menu not showing on mobile when menu is toggled
+[ ] Ensure livereload script only loads in development
+
+## NOTES
+
+- Current color scheme: Purple gradient (#667eea to #764ba2)
+- Mobile breakpoint: 600px
+- Using Hugo static site generator
+- Deployed to GitHub Pages at mihaighita.org
+- Branch context: Currently on 'hugo' branch

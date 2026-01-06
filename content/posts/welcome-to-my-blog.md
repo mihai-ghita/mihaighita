@@ -4,6 +4,7 @@ date: 2026-01-05T10:00:00+02:00
 categories: ["tutorials"]
 tags: ["hugo", "web-development", "blogging"]
 draft: false
+featured_image: "/imgs/1643142025589.jpeg"
 ---
 
 Welcome to my personal blog! I'm excited to share my journey in software engineering, technical insights, and lessons learned along the way.
