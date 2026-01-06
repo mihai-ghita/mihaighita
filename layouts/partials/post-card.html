@@ -8,7 +8,10 @@
         <div class="post-card-content">
             <h3 class="post-card-title">{{ .Title }}</h3>
             <div class="post-card-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <div class="post-card-info">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    <span class="reading-time">{{ .ReadingTime }} min read</span>
+                </div>
                 {{ if .Params.categories }}
                 <div class="post-card-categories">
                     {{ range .Params.categories }}

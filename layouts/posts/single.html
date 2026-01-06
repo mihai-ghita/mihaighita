@@ -15,7 +15,11 @@
             <h1 class="post-title">{{ .Title }}</h1>
 
             <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <div class="post-meta-info">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    <span class="reading-time">{{ .ReadingTime }} min read</span>
+                    <span class="word-count">{{ .WordCount }} words</span>
+                </div>
                 {{ if .Params.categories }}
                 <div class="post-categories">
                     {{ range .Params.categories }}

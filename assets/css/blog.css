@@ -77,9 +77,29 @@
     margin-bottom: 15px;
 }
 
+.post-card-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 .post-card-meta time {
     font-size: 14px;
     color: #718096;
+}
+
+.reading-time {
+    font-size: 14px;
+    color: #718096;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.reading-time::before {
+    content: "•";
+    color: #cbd5e0;
 }
 
 .post-card-categories {
@@ -150,9 +170,29 @@
     border-bottom: 2px solid #e2e8f0;
 }
 
+.post-meta-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
 .post-meta time {
     color: #718096;
     font-size: 15px;
+}
+
+.post-meta .reading-time,
+.post-meta .word-count {
+    color: #718096;
+    font-size: 15px;
+}
+
+.post-meta .reading-time::before,
+.post-meta .word-count::before {
+    content: "•";
+    color: #cbd5e0;
+    margin-right: 12px;
 }
 
 .post-categories {

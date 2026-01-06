@@ -44,7 +44,7 @@
 
 ### Blog Post Improvements
 [X] Add featured image support for blog posts (see docs/FEATURED_IMAGES.md)
-[ ] Add read time estimate to post cards
+[X] Add read time estimate to post cards (see docs/READING_TIME.md)
 [X] Truncate summaries properly (max 150-200 chars) (see docs/SUMMARIES.md)
 [ ] Add "Read More" button to post cards
 [ ] Show tag count or popular tags on cards

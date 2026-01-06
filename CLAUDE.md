@@ -66,6 +66,21 @@ The site is deployed via GitHub Pages:
 - Deploy the `public/` directory contents to GitHub Pages
 - `.nojekyll` file prevents Jekyll processing on GitHub Pages
 
+## Features
+
+### Blog Features
+- **Featured Images**: Optional images for post cards and single posts
+- **Summaries**: Custom descriptions or auto-generated from content
+- **Reading Time**: Automatic calculation based on word count (200 wpm)
+- **Word Count**: Displayed on single post pages
+- **Categories & Tags**: Taxonomies for content organization
+- **Responsive Design**: Mobile-first approach
+
+See detailed documentation in `docs/`:
+- `FEATURED_IMAGES.md` - Featured image usage
+- `SUMMARIES.md` - Writing effective summaries
+- `READING_TIME.md` - Reading time estimates
+
 ## Design System
 
 ### Colors
