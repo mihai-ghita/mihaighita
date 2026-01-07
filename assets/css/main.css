@@ -13,21 +13,22 @@ html {
 /* Body & Global Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     min-height: 100vh;
-    color: #333;
+    color: #e2e8f0;
 }
 
 /* Container */
 .container {
-    background: white;
+    background: #1a202c;
     border-radius: 20px;
     padding: 60px 40px;
     max-width: 800px;
     width: 100%;
     margin: 40px auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease-in;
+    border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
 .home-container {
@@ -69,34 +70,34 @@ body {
 h1 {
     font-size: 42px;
     margin-bottom: 15px;
-    color: #2d3748;
+    color: #f7fafc;
     font-weight: 700;
 }
 
 h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #2d3748;
+    color: #f7fafc;
     font-weight: 700;
 }
 
 h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #2d3748;
+    color: #f7fafc;
     font-weight: 600;
 }
 
 .subtitle {
     font-size: 18px;
-    color: #718096;
+    color: #cbd5e0;
     margin-bottom: 30px;
     line-height: 1.6;
 }
 
 .tagline {
     font-size: 20px;
-    color: #f7fafc;
+    color: #e2e8f0;
     margin-bottom: 40px;
     line-height: 1.6;
     text-align: center;
@@ -104,7 +105,7 @@ h3 {
 
 .description {
     font-size: 16px;
-    color: #4a5568;
+    color: #cbd5e0;
     line-height: 1.8;
     margin: 30px 0;
 }
@@ -112,14 +113,14 @@ h3 {
 /* Status Badge */
 .status {
     display: inline-block;
-    background: #f7fafc;
+    background: #1e293b;
     padding: 12px 24px;
     border-radius: 50px;
     margin: 20px 0;
     font-size: 14px;
-    color: #667eea;
+    color: #a5b4fc;
     font-weight: 600;
-    border: 2px solid #e2e8f0;
+    border: 2px solid rgba(148, 163, 184, 0.2);
 }
 
 .status::before {
@@ -141,15 +142,15 @@ h3 {
     height: 50px;
     min-width: 44px;
     min-height: 44px;
-    background: #f7fafc;
+    background: #1e293b;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #667eea;
+    color: #a5b4fc;
     transition: all 0.3s ease;
-    border: 2px solid #e2e8f0;
+    border: 2px solid rgba(148, 163, 184, 0.2);
 }
 
 .social-links a svg {
@@ -166,9 +167,9 @@ h3 {
 
 /* Navigation */
 .site-header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -186,12 +187,8 @@ h3 {
 .site-title {
     font-size: 24px;
     font-weight: 700;
-    color: #2d3748;
+    color: #f7fafc;
     text-decoration: none;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .menu-toggle {
@@ -226,14 +223,14 @@ h3 {
 
 .nav-link {
     text-decoration: none;
-    color: #4a5568;
+    color: #e2e8f0;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #667eea;
+    color: #a5b4fc;
 }
 
 .dropdown {
@@ -254,13 +251,14 @@ h3 {
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
-    background: white;
+    background: #1a202c;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     min-width: 200px;
     padding: 10px 0;
     list-style: none;
     z-index: 1000;
+    border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -274,14 +272,14 @@ h3 {
 .dropdown-menu a {
     display: block;
     padding: 10px 20px;
-    color: #4a5568;
+    color: #e2e8f0;
     text-decoration: none;
     transition: background 0.2s ease;
 }
 
 .dropdown-menu a:hover {
-    background: #f7fafc;
-    color: #667eea;
+    background: #1e293b;
+    color: #a5b4fc;
 }
 
 /* Hero Section */
@@ -314,7 +312,7 @@ h3 {
 .copyright {
     margin-top: 20px;
     font-size: 14px;
-    color: #f7fafc;
+    color: #e2e8f0;
 }
 
 /* Responsive */
@@ -425,13 +423,14 @@ h3 {
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: #1a202c;
         flex-direction: column;
         gap: 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         padding: 20px;
         animation: slideDown 0.3s ease-out;
         transform-origin: top;
+        border: 1px solid rgba(148, 163, 184, 0.1);
     }
 
     @keyframes slideDown {
