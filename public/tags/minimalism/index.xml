@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minimalism on Mihai Ghita</title>
+    <link>http://localhost:1313/tags/minimalism/</link>
+    <description>Recent content in Minimalism on Mihai Ghita</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/minimalism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minimalism in Web Design</title>
+      <link>http://localhost:1313/posts/minimalism-in-design/</link>
+      <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/minimalism-in-design/</guid>
+      <description>&lt;p&gt;Minimalism in web design isn&amp;rsquo;t just an aesthetic choice—it&amp;rsquo;s a philosophy that prioritizes clarity and purpose.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Focus on Content&lt;/strong&gt;: By removing unnecessary elements, the content becomes the star. Users can focus on what matters most: the information.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Faster Load Times&lt;/strong&gt;: Fewer elements mean faster page loads, which improves user experience and SEO.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Better Mobile Experience&lt;/strong&gt;: Minimal designs translate better to smaller screens, where space is at a premium.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Timeless Design&lt;/strong&gt;: Simple, clean designs age better than trendy, complex layouts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

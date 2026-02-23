@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Mihai Ghita</title>
+    <link>https://mihaighita.org/posts/</link>
+    <description>Recent content in Posts on Mihai Ghita</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mihaighita.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to My Blog</title>
+      <link>https://mihaighita.org/posts/welcome/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://mihaighita.org/posts/welcome/</guid>
+      <description>&lt;p&gt;Welcome to my blog! This is a minimalist space where I share thoughts on software engineering, technology, and various topics that interest me.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve built this site using Hugo, a fast and flexible static site generator, with a clean dark theme that&amp;rsquo;s easy on the eyes.&lt;/p&gt;&#xA;&lt;p&gt;Stay tuned for more content!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
