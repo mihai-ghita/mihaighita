@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web-Development on Mihai Ghita</title>
+    <link>http://localhost:1313/tags/web-development/</link>
+    <description>Recent content in Web-Development on Mihai Ghita</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Minimalist Blog with Hugo</title>
+      <link>http://localhost:1313/posts/building-with-hugo/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-with-hugo/</guid>
+      <description>&lt;p&gt;I chose Hugo for this blog because of its simplicity and speed. Static site generators offer several advantages:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Pre-rendered HTML loads instantly&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Security&lt;/strong&gt;: No database or server-side code to maintain&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Simplicity&lt;/strong&gt;: Write in Markdown, deploy anywhere&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Version Control&lt;/strong&gt;: Content lives in Git alongside code&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Hugo&amp;rsquo;s speed is particularly impressive - it can build thousands of pages in seconds, making it perfect for blogs and documentation sites.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="posts-header">
+    <h1>All Posts</h1>
+    <p>Browse all blog posts by year and month</p>
+</div>
+
+{{ $posts := .Pages }}
+{{ $grouped := $posts.GroupByDate "2006" }}
+
+{{ range $grouped }}
+<div class="year-group">
+    <h2>{{ .Key }}</h2>
+    {{ $monthly := .Pages.GroupByDate "2006-01" }}
+    {{ range $monthly }}
+    <div class="month-group">
+        {{ $dateStr := printf "%s-01" .Key }}
+        {{ $date := $dateStr | time }}
+        <h3>{{ $date.Format "January" }}</h3>
+        {{ range .Pages }}
+        <article class="post-item">
+            <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <div class="post-meta">
+                <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+            </div>
+            {{ if .Params.description }}
+            <p class="post-excerpt">{{ .Params.description }}</p>
+            {{ else if .Summary }}
+            <p class="post-excerpt">{{ .Summary | truncate 200 }}</p>
+            {{ end }}
+        </article>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}

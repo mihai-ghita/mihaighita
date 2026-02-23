@@ -1,0 +1,21 @@
+baseURL = 'https://mihaighita.org/'
+languageCode = 'en-us'
+title = 'Mihai Ghita'
+
+[taxonomies]
+
+[params]
+author = 'Mihai Ghita'
+first_name = 'Mihai'
+description = 'Software Engineer | Tech Enthusiast | Problem Solver'
+github = 'https://github.com/mihai-ghita'
+linkedin = 'https://linkedin.com/in/ghitamihai'
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    tabWidth = 4

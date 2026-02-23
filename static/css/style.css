@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0b0f19;
+    --bg-surface: #111827;
+    --bg-surface-hover: #1a2236;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-subtle: #64748b;
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --accent-soft: rgba(99, 102, 241, 0.12);
+    --border: #1e293b;
+    --border-hover: #334155;
+    --code-bg: #0f172a;
+    --radius: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg);
+    min-height: 100vh;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 1rem;
+}
+
+/* ── Header / Nav ── */
+header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+
+.nav-brand:hover {
+    color: var(--text);
+}
+
+.nav-brand.active {
+    color: var(--accent-hover);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.75rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent-hover);
+}
+
+/* ── Hero ── */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1.5rem 0 3.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-hover);
+    outline: 4px solid var(--accent-soft);
+    flex-shrink: 0;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.hero-social {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+.social-link svg {
+    flex-shrink: 0;
+}
+
+/* ── Posts Section (homepage) ── */
+.posts-section {
+    margin-bottom: 1.5rem;
+}
+
+.posts-section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 2rem;
+}
+
+/* ── Post List Header (all posts page) ── */
+.posts-header {
+    margin-bottom: 3rem;
+}
+
+.posts-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.02em;
+}
+
+.posts-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ── Year / Month Groups ── */
+.year-group {
+    margin-bottom: 3rem;
+}
+
+.year-group h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-subtle);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.month-group {
+    margin-bottom: 1.75rem;
+}
+
+.month-group h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* ── Post Item ── */
+.post-item {
+    padding: 1.25rem 1.25rem 1.25rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+    position: relative;
+}
+
+.post-item:hover {
+    background-color: var(--bg-surface);
+    border-color: var(--border);
+}
+
+.post-item-meta {
+    margin-bottom: 0.25rem;
+}
+
+.post-item-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    line-height: 1.3;
+}
+
+.post-item-title a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.post-item-title a:hover {
+    color: var(--accent-hover);
+}
+
+/* Fallback for list pages using h4 */
+.post-item h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.post-item h4 a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.post-item h4 a:hover {
+    color: var(--accent-hover);
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-excerpt {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ── All Posts Button ── */
+.all-posts-link {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.all-posts-button {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background-color: transparent;
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.all-posts-button:hover {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+/* ── Typography ── */
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+}
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+a {
+    color: var(--accent-hover);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* ── Single Post ── */
+.post {
+    margin-bottom: 3rem;
+}
+
+.post-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-header h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.post-header .post-meta {
+    font-size: 0.85rem;
+}
+
+.post-description {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--accent);
+    background-color: var(--accent-soft);
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.post-content {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.post-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.post-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.15rem;
+}
+
+.post-content p {
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+}
+
+.post-content ul,
+.post-content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.75rem;
+    color: var(--text-muted);
+}
+
+.post-content li {
+    margin-bottom: 0.4rem;
+}
+
+.post-content code {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-hover);
+    border-radius: 4px;
+    padding: 0.15em 0.4em;
+    font-size: 0.875em;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    color: var(--text);
+}
+
+.post-content pre {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.post-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+/* Chroma syntax highlighting integration */
+.post-content .highlight {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.post-content .highlight .chroma {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.post-content .highlight pre {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.post-content .highlight code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.post-content blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1.25rem;
+    margin-left: 0;
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+}
+
+.post-content a {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.post-content a:hover {
+    color: var(--text);
+}
+
+/* ── Post Navigation ── */
+.post-navigation {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.post-nav-link {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.post-nav-link:hover {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+.post-nav-link.post-nav-empty {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.post-nav-direction {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 0.5rem;
+}
+
+.post-nav-link:hover .post-nav-direction {
+    color: var(--accent-hover);
+}
+
+.post-nav-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.post-nav-link:hover .post-nav-title {
+    color: var(--accent-hover);
+}
+
+.post-nav-next {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.post-nav-prev {
+    text-align: left;
+    align-items: flex-start;
+}
+
+/* ── Footer ── */
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.footer-social-link:hover {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+.footer-social-link svg {
+    flex-shrink: 0;
+}
+
+footer p {
+    color: var(--text-subtle);
+    font-size: 0.825rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 0 2.5rem;
+    }
+
+    .hero-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    .post-header h1 {
+        font-size: 1.65rem;
+    }
+
+    .posts-header h1 {
+        font-size: 1.65rem;
+    }
+
+    .post-navigation {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .post-nav-link {
+        padding: 0.875rem;
+    }
+
+    .post-nav-title {
+        font-size: 0.9rem;
+    }
+}
