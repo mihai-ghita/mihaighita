@@ -1,6 +1,6 @@
 ---
 title: "Welcome to My Blog"
-date: 2025-02-15
+date: 2026-01-15
 draft: false
 description: "A brief introduction to this minimalist blog and what you can expect to find here."
 ---
