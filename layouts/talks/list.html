@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="posts-header">
+    <h1>Talks</h1>
+    <p>A list of talks and presentations I've given</p>
+</div>
+
+{{ $talks := .Pages.ByDate.Reverse }}
+
+{{ range $talks }}
+<article class="post-item">
+    <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+    <div class="post-meta">
+        <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        {{ if .Params.event }}
+        <span>·</span>
+        <span>{{ .Params.event }}</span>
+        {{ end }}
+    </div>
+    {{ if .Params.description }}
+    <p class="post-excerpt">{{ .Params.description }}</p>
+    {{ else if .Summary }}
+    <p class="post-excerpt">{{ .Summary | truncate 200 }}</p>
+    {{ end }}
+</article>
+{{ end }}
+{{ end }}

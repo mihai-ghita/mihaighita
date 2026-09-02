@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article class="post">
+    <div class="post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="post-meta">
+            {{ if .Date }}
+            <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+            {{ end }}
+            {{ if .Params.event }}
+            <span>·</span>
+            <span>{{ .Params.event }}</span>
+            {{ end }}
+        </div>
+        {{ if .Params.description }}
+        <p class="post-description">{{ .Params.description }}</p>
+        {{ end }}
+    </div>
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+
+    {{ with .Params.slides }}
+    <div class="talk-slides-link">
+        <a href="{{ . | relURL }}" class="all-posts-button" target="_blank" rel="noopener noreferrer">View slides →</a>
+    </div>
+    {{ end }}
+</article>
+{{ end }}

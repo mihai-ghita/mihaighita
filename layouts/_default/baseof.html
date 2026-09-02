@@ -20,6 +20,7 @@
                 <a href="{{ "/" | relURL }}" class="nav-brand{{ if .IsHome }} active{{ end }}">{{ .Site.Params.author }}</a>
                 <div class="nav-links">
                     <a href="{{ "/posts" | relURL }}" {{ if eq .Type "posts" }}class="active"{{ end }}>Posts</a>
+                    <a href="{{ "/talks" | relURL }}" {{ if eq .Type "talks" }}class="active"{{ end }}>Talks</a>
                     <a href="{{ "/about" | relURL }}" {{ if eq .RelPermalink "/about/" }}class="active"{{ end }}>About Me</a>
                 </div>
             </nav>
