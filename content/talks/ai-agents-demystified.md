@@ -2,9 +2,8 @@
 title: "AI Agents, Demystified"
 date: 2026-09-02
 draft: false
-event: "Engineering brown-bag"
 description: "Seven words you keep hearing — chat history, context, skill, tool call, agent, sandbox, MCP — and the plain architecture behind each one."
-slides: "/talks/ai-agents-architecture/ai-agents-architecture.html"
+slides: "/talks/ai-agents-demystified/presentation.html"
 ---
 
 There is no magic here. Every one of those seven words — chat history, context, skill, tool call, agent, sandbox, MCP — is a boring engineering solution to a boring engineering constraint, and they build on each other in exactly that order:
